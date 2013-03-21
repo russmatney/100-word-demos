@@ -1,0 +1,30 @@
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span2">
+      <!--Sidebar content-->
+
+      Search: <input ng-model="query">
+      Sort by:
+      <select ng-model="orderProp">
+        <option value="date">Date</option>
+        <option value="regular-title">Title</option>
+      </select>
+
+    </div>
+    <div class="span10">
+      <!--Body content-->
+
+      <ul class="stories">
+        <li ng-repeat="story in stories | filter:query | orderBy:orderProp" class="thumbnail">
+          <p class="title">{{story['regular-title']}}</p>
+          <p class="story" ng-bind-html="story['regular-body']"></p>
+          
+          <!-- <li class="tags" ng-repeat="tag in stories.story.tags"> -->
+            <p class='tags'>Tags: {{story.tags}}</p>
+          <!-- </li> -->
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</div>
