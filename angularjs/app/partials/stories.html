@@ -4,11 +4,11 @@
       <!--Sidebar content-->
 
       Search: <input ng-model="query">
-      Sort by:
+<!--       Sort by:
       <select ng-model="orderProp">
         <option value="date">Date</option>
         <option value="regular-title">Title</option>
-      </select>
+      </select> -->
 
     </div>
     <div class="span10">
@@ -19,10 +19,9 @@
           <p class="title">{{story['regular-title']}}</p>
           <p class="story" ng-bind-html="story['regular-body']"></p>
           
-          <!-- <li class="tags" ng-repeat="tag in stories.story.tags"> -->
-            <p class='tags'>Tags: {{story.tags}}</p>
-          <!-- </li> -->
-        </li>
+          <li class="tags" ng-repeat="tag in story.tags"> -->
+            <p class='tags'>Tags: {{tag[0]}}</p>
+          </li>
       </ul>
 
     </div>

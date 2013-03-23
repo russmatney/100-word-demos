@@ -9,6 +9,7 @@ function StoriesCtrl($scope, $http) {
   	.success(function(data, status) {
   		console.dir(data.posts);
   		$scope.stories = data.posts;
+  		
   	})
   	.error(function(data, status) {
   		console.log("failure: "+ status);
