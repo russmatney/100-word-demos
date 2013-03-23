@@ -10,22 +10,25 @@
         <option value="regular-title">Title</option>
       </select> -->
 
-      <h3>Searching for: <span ng-bind="query">{{query}}</span></h3>
+      <h3>Filter by: <span ng-bind="query">{{query}}</span></h3>
 
     </div>
     <div class="span10">
       <!--Body content-->
-
       <div class="main">
-        <ul class="stories" ng-repeat="story in stories | filter:query | orderBy:orderProp">
-          <li class="thumbnail" ng-class="column($index)">
-            <p class="title">{{story['regular-title']}}</p>
-            <p class="story" ng-bind-html="story['regular-body']"></p>
 
-            <ul class='tags' ng-repeat="tag in story.tags">
-              <li class='tag'>{{tag}}</li>
-            </ul>
-        </ul>
+        <div class='cols' ng-repeat='col in cols'>
+          <ul class="stories">
+            <li class="thumbnail" ng-repeat="story in col | filter:query | orderBy:orderProp">
+              <p class="title">{{story['regular-title']}}</p>
+              <p class="story" ng-bind-html="story['regular-body']"></p>
+
+              <ul class='tags' ng-repeat="tag in story.tags">
+                <li class='tag'>{{tag}}</li>
+              </ul>
+          </ul>
+        </div>
+
       </div>
 
     </div>
