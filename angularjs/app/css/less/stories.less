@@ -6,6 +6,27 @@ body{
 	background: #443222;
 }
 
+.columns(@colwidth: 250px, @colcount: 0, @colgap: 50px, @columnRuleColor: #EEE, @columnRuleStyle: solid, @columnRuleWidth: 1px) {
+  -moz-column-width: @colwidth;
+  -moz-column-count: @colcount;
+  -moz-column-gap: @colgap;
+  -moz-column-rule-color: @columnRuleColor;
+  -moz-column-rule-style: @columnRuleStyle;
+  -moz-column-rule-width: @columnRuleWidth;
+  -webkit-column-width: @colwidth;
+  -webkit-column-count: @colcount;
+  -webkit-column-gap: @colgap;
+  -webkit-column-rule-color: @columnRuleColor;
+  -webkit-column-rule-style: @columnRuleStyle;
+  -webkit-column-rule-width: @columnRuleWidth;
+  column-width: @colwidth;
+  column-count: @colcount;
+  column-gap: @colgap;
+  column-rule-color: @columnRuleColor;
+  column-rule-style: @columnRuleStyle;
+  column-rule-width: @columnRuleWidth;
+}
+
 .transition(@transition) {
   -webkit-transition: @transition;
   -moz-transition: @transition;
@@ -13,13 +34,22 @@ body{
   transition: @transition;
 }
 
+h3{
+	color:white;
+}
+
+.main{
+	border: red solid 1px;
+	width: 690px;
+	height: auto;
+}
+
 .stories{
 	li {
-		width:270px;
-		float:left;
 		margin:1px;
 		background-color:#333333;
 		.transition(all 0.2s linear);
+		
 		.title{
 			font-size: 20px;
 			color:#cccccb;
@@ -37,7 +67,12 @@ body{
 			}
 		}
 		.tags {
-			padding: 3px 20px;
+			padding: 3px 5px;
+			list-style: none;
+			li{
+				display:inline;
+				width: auto; 
+			}
 		}
 		&:hover{
 			background-color: #cccccb;
@@ -46,6 +81,19 @@ body{
 				color: #333333;
 			}
 		}
+
+/*		&.column-one{
+			background: black;
+			margin-left:0;
+		}
+		&.column-two{
+			background: blue;
+			margin-left:10px;
+		}
+		&.column-three{
+			background: green;
+			margin-left:10px;
+		}*/
 	}
 }
 
