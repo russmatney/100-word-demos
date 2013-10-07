@@ -16,7 +16,7 @@ function StoriesCtrl($scope, $http) {
 
   var sortStories = function(stories) {
 
-    var numberOfColumns = 6;
+    var numberOfColumns = 3;
 
     var cols = [];
     var colHeights = [];
