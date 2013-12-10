@@ -5,7 +5,7 @@
   <title>AngularJS</title>
 
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.2/angular.min.js"></script>
-  
+
   <script src="app.js"></script>
 
 </head>
@@ -19,7 +19,15 @@
   <li>Quest: {{data.quest}}</li>
 </ul>
 
+<ul style="list-style-type:none">
+  <li ng-repeat="story in stories">
+    <h3>{{story["regular-title"]}}</h3>
+    <br>
+    <p>{{story["regular-body"]}}</p>
+  </li>
+</ul>
+
 </div>
-  
+
 </body>
 </html>
