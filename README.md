@@ -1,3 +1,4 @@
-A few projects I used to learn AngularJS, EmberJS, Backbone, Ruby, etc.
+Basic apps that use various JS front-end frameworks to wire-up json and templates.
 
-Stories are from [russmatney.tumblr.com](http://www.russmatney.tumblr.com).
+- AngularJS
+- jQuery + Mustache
